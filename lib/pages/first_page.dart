@@ -71,13 +71,17 @@ class _FirstPageState extends State<FirstPage> {
                   SizedBox(
                     height: 60,
                   ),
-                  /* BottomNavigationBar(
+                   /* BottomNavigationBar(
                       selectedItemColor: Color(0xff5786FF),
                       unselectedItemColor: Color(0xff40577D),
                       type: BottomNavigationBarType.fixed,
+                      onTap: ((value) {
+                        currentIndex = value;
+                      }),
                       items: [
                         BottomNavigationBarItem(
                             icon: Icon(Icons.home), label: "home"),
+                            
                         BottomNavigationBarItem(
                             icon: Icon(Icons.abc), label: "Activity"),
                         BottomNavigationBarItem(
@@ -85,7 +89,7 @@ class _FirstPageState extends State<FirstPage> {
                         BottomNavigationBarItem(
                             icon: Icon(Icons.portable_wifi_off_outlined),
                             label: "Profile"),
-                      ]) */
+                      ])  */
                 ],
               ),
             ),

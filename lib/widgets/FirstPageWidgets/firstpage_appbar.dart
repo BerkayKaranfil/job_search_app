@@ -22,7 +22,9 @@ class _FirstPageAppBarWidgetState extends State<FirstPageAppBarWidget> {
         children: [
           GestureDetector(
               onTap: () {
-                setState(() {});
+                setState(() {
+                  Navigator.pop(context);
+                });
               },
               child: SvgPicture.asset(
                   "assets/firstassets/arrowleft.svg")),
