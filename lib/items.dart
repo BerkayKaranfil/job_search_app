@@ -1,6 +1,28 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:job_search_app/pages/first_page.dart';
+import 'package:job_search_app/pages/home_page.dart';
 
 class items with ChangeNotifier{
+
+ /*  int _selectedIndexx = 0;
+
+  int get selectedIndex => _selectedIndexx;
+
+  set selectedIndex(int value) {
+    _selectedIndexx = value;
+    notifyListeners();
+  }
+
+  List<NavbarP> _itemss = [
+    NavbarP(widget: HomePage(),name: 'Home',icon: Icons.home),
+    NavbarP(widget: FirstPage(),name: 'Messages',icon: Icons.chat),
+    NavbarP(widget: FirstPage(),name: 'Profile',icon: Icons.account_box_rounded),
+    NavbarP(widget: FirstPage(),name: 'Profile',icon: Icons.account_box_rounded),
+  ];
+
+  List<NavbarP> get _items => _itemss; */
+
   List jobList = [
     {
       "photo" : "assets/homeassets/list1.svg",
@@ -41,3 +63,11 @@ class items with ChangeNotifier{
   ];
   
 }
+
+/* class NavbarP {
+  String? name;
+  IconData? icon;
+  Widget? widget;
+
+  NavbarP({this.widget, this.name, this.icon});
+} */

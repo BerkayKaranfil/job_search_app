@@ -29,6 +29,7 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
         unselectedItemColor: Color(0xff40577D),
         type: BottomNavigationBarType.fixed,
         items: [
+        
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
         BottomNavigationBarItem(icon: Icon(Icons.abc), label: "Activity"),
         BottomNavigationBarItem(icon: Icon(Icons.saved_search), label: "Saved"),
