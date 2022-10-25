@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer(builder: ((context, items items, widget) {
       return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Color(0xff0C0D15),
         body: Padding(
           padding: const EdgeInsets.only(right: 20, left: 20),

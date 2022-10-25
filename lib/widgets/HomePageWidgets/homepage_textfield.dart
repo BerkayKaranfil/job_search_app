@@ -8,7 +8,8 @@ class HomePageTextFieldWidget extends StatefulWidget {
   const HomePageTextFieldWidget({super.key});
 
   @override
-  State<HomePageTextFieldWidget> createState() => _HomePageTextFieldWidgetState();
+  State<HomePageTextFieldWidget> createState() =>
+      _HomePageTextFieldWidgetState();
 }
 
 class _HomePageTextFieldWidgetState extends State<HomePageTextFieldWidget> {
@@ -22,6 +23,7 @@ class _HomePageTextFieldWidgetState extends State<HomePageTextFieldWidget> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: TextFormField(
+        style: GoogleFonts.inter(color: Colors.white),
         cursorColor: Colors.white,
         decoration: InputDecoration(
           hintText: "Search job or company...",
