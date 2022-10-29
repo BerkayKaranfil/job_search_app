@@ -27,6 +27,92 @@ class _FirstPageMainBoxWidgetState extends State<FirstPageMainBoxWidget> {
             decoration: BoxDecoration(
                 color: Color(0xff0C0D15),
                 borderRadius: BorderRadius.circular(12)),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: items.detailmenus.length,
+              itemBuilder: ((context, index) {
+              return GestureDetector(
+              onTap: () {
+                
+                  items.getIndex(index);
+                
+              },
+              child: Container(
+                height: 32,
+                width: 106,
+                decoration: BoxDecoration(
+                  color: items.jobContainer(index),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Center(
+                  child: Text(
+                    "${items.getMenu(index)}",
+                    style: GoogleFonts.inter(
+                        fontSize: 13,
+                        color: items.jobTextContainer(index)
+                  ),
+                ),
+              ),
+              ));
+            }))
+          ),
+          SizedBox(
+            height: 24,
+          ),
+          Text(
+            // "${items.detailmenus[items.selectedindex!]["firstHeader"]}",
+            "${items.detailmenus[items.mainIndexx]["firstHeader"]}",
+           // mainIndex == 0 ? "Job Descriptions" : "Company",
+            style: GoogleFonts.inter(
+                fontSize: 15,
+                color: Color(0xffF8FAFC),
+                fontWeight: FontWeight.w600),
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Text(
+            "${items.detailmenus[items.mainIndexx]["firstHeaderContent"]}",
+            /* mainIndex == 0
+                ? "Ready to help unleash the power of teams across the\nglobe?\nWe're looking for a Product Designer to join our Cloud\nSecurity team. Jira Software, Jira Service Management,\nConfluence, and Bitbucket Data Center are Atlassian’s\non-premise offers used by our largest and most\ncomplex customers."
+                : "", */
+            style: GoogleFonts.inter(
+              fontSize: 13,
+              color: Color(0xffAAAFD7),
+            ),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Text(
+            "${items.detailmenus[items.mainIndexx]["secondHeader"]}",
+          //  mainIndex == 0 ? "Responsibilities" : "",
+            style: GoogleFonts.inter(
+                fontSize: 15,
+                color: Color(0xffF8FAFC),
+                fontWeight: FontWeight.w600),
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Text(
+            "${items.detailmenus[items.mainIndexx]["secondHeaderContent"]}",
+            /* mainIndex == 0
+                ? "# Work on projects across all our Cloud products\n# Harness your product design skills to help\nstreamline the critical experience for our users."
+                : "", */
+            style: GoogleFonts.inter(fontSize: 13, color: Color(0xffAAAFD7)),
+          ),
+        ],
+      );
+      /* Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: 40,
+            width: 327,
+            decoration: BoxDecoration(
+                color: Color(0xff0C0D15),
+                borderRadius: BorderRadius.circular(12)),
             child: Row(
               children: [
                 Spacer(),
@@ -157,7 +243,7 @@ class _FirstPageMainBoxWidgetState extends State<FirstPageMainBoxWidget> {
             style: GoogleFonts.inter(fontSize: 13, color: Color(0xffAAAFD7)),
           ),
         ],
-      );
+      ); */
     }));
   }
 }
